@@ -4,7 +4,7 @@
 #
 Name     : readme_renderer
 Version  : 24.0
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/44/de/a567140b13a0fc8d3b04d85a510b5a7d9869b44b2939fa8ac07c5e421485/readme_renderer-24.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/44/de/a567140b13a0fc8d3b04d85a510b5a7d9869b44b2939fa8ac07c5e421485/readme_renderer-24.0.tar.gz
 Summary  : readme_renderer is a library for rendering "readme" descriptions for Warehouse
@@ -15,11 +15,13 @@ Requires: readme_renderer-python = %{version}-%{release}
 Requires: readme_renderer-python3 = %{version}-%{release}
 Requires: Pygments
 Requires: bleach
+Requires: cmarkgfm
 Requires: docutils
 Requires: six
 BuildRequires : Pygments
 BuildRequires : bleach
 BuildRequires : buildreq-distutils3
+BuildRequires : cmarkgfm
 BuildRequires : docutils
 BuildRequires : pluggy
 BuildRequires : py-python
@@ -29,34 +31,12 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-Readme Renderer
 ===============
-
-Readme Renderer is a library that will safely render arbitrary
-``README`` files into HTML. It is designed to be used in Warehouse_ to
-render the ``long_description`` for packages. It can handle Markdown,
-reStructuredText (``.rst``), and plain text.
-
-.. _Warehouse: https://github.com/pypa/warehouse
-
-
-Check Description Locally
--------------------------
-
-To locally check whether your long descriptions will render on PyPI, first
-build your distributions, and then use the |twine check|_ command.
-
-
-Code of Conduct
----------------
-
-Everyone interacting in the readme_renderer project's codebases, issue trackers,
-chat rooms, and mailing lists is expected to follow the `PyPA Code of Conduct`_.
-
-
-.. |twine check| replace:: ``twine check``
-.. _twine check: https://packaging.python.org/guides/making-a-pypi-friendly-readme#validating-restructuredtext-markup
-.. _PyPA Code of Conduct: https://www.pypa.io/en/latest/code-of-conduct/
+        
+        Readme Renderer is a library that will safely render arbitrary
+        ``README`` files into HTML. It is designed to be used in Warehouse_ to
+        render the ``long_description`` for packages. It can handle Markdown,
+        reStructuredText (``.rst``), and plain text.
 
 %package license
 Summary: license components for the readme_renderer package.
@@ -80,11 +60,10 @@ Summary: python3 components for the readme_renderer package.
 Group: Default
 Requires: python3-core
 Provides: pypi(readme_renderer)
-Requires: pypi(Pygments)
-Requires: pypi(cmarkgfm)
-Requires: pypi(six)
-Requires: pypi(docutils)
 Requires: pypi(bleach)
+Requires: pypi(docutils)
+Requires: pypi(pygments)
+Requires: pypi(six)
 
 %description python3
 python3 components for the readme_renderer package.
@@ -99,8 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583296752
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583453339
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
