@@ -1,5 +1,5 @@
 PKG_NAME := readme_renderer
-URL = https://files.pythonhosted.org/packages/44/de/a567140b13a0fc8d3b04d85a510b5a7d9869b44b2939fa8ac07c5e421485/readme_renderer-24.0.tar.gz
+URL = https://files.pythonhosted.org/packages/d6/3b/2dc38264c9dfe0974f44ee075672cf6ed09fc8a3c4d8e409785ca35e935e/readme_renderer-25.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
