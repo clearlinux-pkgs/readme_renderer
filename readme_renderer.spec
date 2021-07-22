@@ -4,7 +4,7 @@
 #
 Name     : readme_renderer
 Version  : 29.0
-Release  : 16
+Release  : 17
 URL      : https://files.pythonhosted.org/packages/f4/be/09db3768f2f426c6427487c1b2d2de427f615bcb8d52aab3782124d4e57a/readme_renderer-29.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f4/be/09db3768f2f426c6427487c1b2d2de427f615bcb8d52aab3782124d4e57a/readme_renderer-29.0.tar.gz
 Summary  : readme_renderer is a library for rendering "readme" descriptions for Warehouse
